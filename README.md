@@ -1,3 +1,2 @@
 # Fundamentals of AI and Machine Learning
-# machine-learning-udemy
-# machine-learning-udemy
+### by udemy course["https://www.udemy.com/machinelearning"]
