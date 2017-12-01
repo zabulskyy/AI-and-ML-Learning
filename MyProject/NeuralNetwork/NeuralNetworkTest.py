@@ -15,11 +15,25 @@ actual = []
 
 
 nn = XORNeuralNetwork()
-generations = 100000
+generations = 1000000
 print("error for not trained NN:\n" + str(nn.compute_error()))
+print("====")
+print(nn.compute_result(0, 0))
+print(nn.compute_result(1, 0))
+print(nn.compute_result(0, 1))
+print(nn.compute_result(1, 1))
+print("====")
 
 # train
 for i in range(generations):
     nn.train()
+
+print("====")
+print(nn.compute_result(0, 0))
+print(nn.compute_result(1, 0))
+print(nn.compute_result(0, 1))
+print(nn.compute_result(1, 1))
+print("====")
+
 print("---")
 print("error with {0} generations:\n".format(generations), str(nn.compute_error()))
