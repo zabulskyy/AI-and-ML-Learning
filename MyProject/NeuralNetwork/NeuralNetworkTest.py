@@ -15,7 +15,7 @@ actual = []
 
 
 nn = XORNeuralNetwork()
-generations = 1000000
+generations = 100000
 print("error for not trained NN:\n" + str(nn.compute_error()))
 print("====")
 print(nn.compute_result(0, 0))
