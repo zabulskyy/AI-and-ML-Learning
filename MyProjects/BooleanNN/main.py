@@ -39,16 +39,20 @@ def hypothesis(w, X):
     return g(np.dot(w, X))
 
 
-X = XOR_data[:, :2]
+X = np.ones((4, 7))
+X[:, 1:3] = XOR_data[:, :2]
+X[:, 3:5] = XOR_data[:, :2]
+X[:, 5:] = XOR_data[:, :2]
 y = XOR_data[:, 2]
-w = np.random.rand(2, 1)
+w = np.random.rand(7, 1)
 
-generations = 100
-a = 1
+generations = 100000
+a = 100
 
 for i in range(generations):
     h = hypothesis(w.T, X.T)
     e = cost(h, y)
     w -= a / len(w) * fit(h, X, y)
-    print(h)
-
+print(w)
+print(h[0])
+print(e)
